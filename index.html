@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abhiloans Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/jstat@1.9.2/dist/jstat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/formulajs/1.0.8/formula.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <h1>Abhiloans Calculator</h1>
+    <form id="calculatorForm">
+      <label for="portfolio">Client Portfolio:</label>
+      <input
+        type="number"
+        id="portfolio"
+        name="portfolio"
+        required
+      /><br /><br />
+
+      <label for="schemeType">Type Of Scheme:</label>
+      <select id="schemeType" name="schemeType" required>
+        <option value="Equity">Equity</option>
+        <option value="Debt">Debt</option>
+        <option value="Hybrid">Hybrid</option></select
+      ><br /><br />
+
+      <label for="tenure">Tenure (Years):</label>
+      <input type="number" id="tenure" name="tenure" required /><br /><br />
+
+      <label for="cagr">MF CAGR (as a decimal):</label>
+      <input
+        type="number"
+        id="cagr"
+        name="cagr"
+        step="0.01"
+        required
+      /><br /><br />
+
+      <label for="interestRate">Interest Rate (as a decimal):</label>
+      <input
+        type="number"
+        id="interestRate"
+        name="interestRate"
+        step="0.01"
+        required
+      /><br /><br />
+
+      <input type="button" value="Calculate" onclick="calculateResults()" />
+    </form>
+
+    <h2>Results</h2>
+    <p id="sellMFResult"></p>
+    <p id="loanResult"></p>
+    <p id="advantage"></p>
+  </body>
+</html>
